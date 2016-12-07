@@ -8,7 +8,7 @@ LunchCheckController.inject = ['$scope'];
 
 function LunchCheckController ($scope){
    $scope.name = "David";
-   $scope.mensaje = "Sin mensaje";
+   $scope.mensaje = "";
    $scope.checkIfTooMuch = function(){
      $scope.mensaje = "Entrando en check";
      var lunchList = $scope.lunchList;
