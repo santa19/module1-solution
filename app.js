@@ -7,10 +7,8 @@ angular.module('LunchCheck', [])
 LunchCheckController.inject = ['$scope'];
 
 function LunchCheckController ($scope){
-   $scope.name = "David";
    $scope.mensaje = "";
    $scope.checkIfTooMuch = function(){
-     $scope.mensaje = "Entrando en check";
      var lunchList = $scope.lunchList;
      if(lunchList){
        var size = lunchList.split(",").length;
