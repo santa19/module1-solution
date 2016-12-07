@@ -12,11 +12,15 @@ function LunchCheckController ($scope){
    $scope.checkIfTooMuch = function(){
      $scope.mensaje = "Entrando en check";
      var lunchList = $scope.lunchList;
-     if(lunchList != null){
+     if(lunchList){
        var size = lunchList.split(",").length;
-       alert(size);
+       if(size<4){
+         $scope.mensaje = "Enjoy!";
+       }else{
+          $scope.mensaje = "Too much";
+       }
      }else{
-
+        $scope.mensaje = "Please enter data first";
      }
    }
 };
